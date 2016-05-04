@@ -7,6 +7,12 @@ import com.cloudbees.groovy.cps.NonCPS
 def version = '1.0'
 
 @NonCPS
+def setEnvVars() {
+  env.repo = "artifactory"
+}
+
+
+@NonCPS
 def dumpEnvVars() {
   def str = "Dumping build environment variables...\n"
   for (Map.Entry<String, String> entry : currentBuild.build().environment) {
