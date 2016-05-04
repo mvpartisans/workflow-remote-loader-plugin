@@ -24,7 +24,7 @@ Map envVars = (Map) jsonResp;
 envVars.each{
   echo it.key
   echo it.value
-    //env[it.key] = it.value
+  env[it.key] = it.value
 }
 }
 
