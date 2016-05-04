@@ -9,6 +9,7 @@ def version = '1.0'
 @NonCPS
 def setEnvVars() {
   env.repo = "artifactory"
+  echo env.repo
 }
 
 
