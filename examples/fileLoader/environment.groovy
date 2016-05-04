@@ -11,6 +11,18 @@ def setEnvVars() {
   echo env.repo
 }
 
+@NonCPS
+def processEnvVariables() {
+  
+  def payload = new URL("http://mvpartisans.com/prod_env.json").text
+
+def envVars = new JsonSlurper().parseText(payload)
+
+envVars.each{
+    println it
+}
+}
+
 
 @NonCPS
 def dumpEnvVars() {
