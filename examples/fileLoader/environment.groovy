@@ -17,10 +17,14 @@ def processEnvVariables() {
   
   def payload = new URL("http://mvpartisans.com/prod_env.json").text
 
-def envVars = new JsonSlurper().parseText(payload)
+def jsonResp = new JsonSlurper().parseText(payload)
+
+Map envVars = (Map) jsonResp;
 
 envVars.each{
-    println it
+  echo it.key
+  echo it.value
+    //env[it.key] = it.value
 }
 }
 
