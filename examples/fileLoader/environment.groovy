@@ -3,6 +3,7 @@
  */
 
 import com.cloudbees.groovy.cps.NonCPS
+import groovy.json.JsonSlurper
 
 def version = '1.0'
 
